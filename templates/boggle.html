@@ -1,0 +1,28 @@
+{% extends 'base.html'%} {% block title %} Boggle {% endblock%} {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+{% endblock%} {% block content%}
+<div id="timer">60</div>
+<div id="container">
+  {% for rows in board %}
+  <div class="rows">
+    {% for colummns in rows%}
+    <div class="colummns">{{colummns}}</div>
+    {% endfor %}
+  </div>
+
+  {% endfor %}
+</div>
+
+<form action="/guess" method="post" id="form">
+  <input type="text" name="guess" id="guess" placeholder="Make a guess.." />
+  <button>Submit Guess!</button>
+</form>
+<div>You have played {{times_played}}</div>
+<div id="highestScore"></div>
+<div id="wordsUsed"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.im.js"></script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+{% endblock %}

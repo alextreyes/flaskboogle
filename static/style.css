@@ -1,0 +1,23 @@
+/* .rows {
+  background-color: blue;
+  border: 20px;
+  border-color: black;
+  border: 1px dotted black;
+} */
+
+.colummns {
+  color: white;
+  text-align: center;
+  width: 100px;
+  margin: 10px;
+  background-color: #1e87e1;
+}
+#container {
+  position: relative;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #de4221;
+  background-color: #e1781e;
+}
